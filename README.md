@@ -11,3 +11,7 @@ The app relies on the travelpayouts API and consists of two major parts:
 This is a work-in-progress app in an early stage of development. Expect things to be broken :)
 
 Your feedback and feature requests are very appreciated.
+
+# Known issues
+
+* No i18n yet

@@ -1,0 +1,5 @@
+{
+  "kill": "tickets",
+  "builder": "cmake"
+}
+

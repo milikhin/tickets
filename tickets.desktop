@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Tickets
+Exec=tickets
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true

@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>utils.js</file>
+        <file>CityPicker.qml</file>
+        <file>components/DatePicker.qml</file>
+        <file>WebView.qml</file>
+        <file>components/ToolButton.qml</file>
+        <file>components/FakeTextField.qml</file>
+        <file>Settings.qml</file>
+        <file>components/SearchParams.qml</file>
+    </qresource>
+</RCC>

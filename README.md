@@ -1,17 +1,18 @@
 # Tickets
+## About
 Search airline tickets on Ubuntu Touch.
 
-# About
 The app relies on the travelpayouts API and consists of two major parts:
 
 * native UI (QML) to set up search filters 
 * slightly optimized search results web frontend
 
-# Development status
+## Development status
 This is a work-in-progress app in an early stage of development. Expect things to be broken :)
 
 Your feedback and feature requests are very appreciated.
 
-# Known issues
+## Known issues
 
-* No i18n yet
+* No internationalization yet
+* No support for convergence yet

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Tickets
 Exec=tickets
+Icon=assets/logo.svg
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true

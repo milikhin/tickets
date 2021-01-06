@@ -28,6 +28,7 @@ configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION /)
 install(FILES tickets.apparmor DESTINATION /)
 install(FILES tickets.desktop DESTINATION /)
+install(DIRECTORY assets DESTINATION /)
 
 add_executable(tickets
   main.cpp

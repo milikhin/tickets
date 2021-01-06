@@ -1,4 +1,7 @@
 # Tickets
+
+![App logo](http://milikhin.name/img/tickets.png?)
+
 ## About
 Search airline tickets on Ubuntu Touch.
 
@@ -16,3 +19,4 @@ Your feedback and feature requests are very appreciated.
 
 * No internationalization yet
 * No support for convergence yet
+* No support for dark theme

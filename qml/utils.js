@@ -81,3 +81,19 @@ function getSearchUrl(options) {
 
     return url
 }
+
+/**
+ *
+ * @param {string} color1 - hex color
+ * @param {string} color2 - hex color
+ * @returns {boolean} - true if color1 is darker than color2, false otherwise
+ */
+function isDarker(color1, color2) {
+    return __getColorDarkness(color1.toString()) < __getColorDarkness(color2.toString())
+  
+    function __getColorDarkness(color) {
+      return parseInt(color.slice(1, 3), 16) +
+        parseInt(color.slice(3, 5), 16) +
+        parseInt(color.slice(5), 16)
+    }
+  }

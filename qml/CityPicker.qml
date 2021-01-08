@@ -39,13 +39,17 @@ ColumnLayout {
 
         placeholderText: qsTr("City or airport...")
         onTextChanged: {
+            model.clear()
+            if (!text) {
+                return
+            }
+
             var requestId = Math.random()
             uid = requestId
 
             error.visible = false
             resultsLabel.visible = false
             busyIndicator.visible = true
-            model.clear()
 
             QmlJs.findCity(text, function(err, res) {
                 if (uid !== requestId) {

@@ -1,6 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Controls.Suru 2.2
+import QtQuick.Layouts 1.3
 import Morph.Web 0.1
 import QtWebEngine 1.1
 
@@ -9,35 +10,41 @@ Item {
     property alias url: webView.url
     property int itemSpacing: 0
 
-    BusyIndicator {
-        anchors.centerIn: parent
-        visible: webView.loading
-    }
-
-    WebView {
-        id: webView
-        visible: !loading || loadProgress > 90
+    ColumnLayout {
         anchors.fill: parent
-        zoomFactor: Suru.units.gu(1) / 8
-        onLoadProgressChanged: {
-            console.log('load progress', loadProgress)
+        visible: loading || webView.title !== baseUrl
+
+        ProgressBar {
+            Layout.fillWidth: true
+            indeterminate: true
+            visible: webView.loading
         }
 
-        onNavigationRequested: function(request) {
-            const urlStr = request.url.toString()
-            console.log('Navigation requested', urlStr)
-            const isWhilteLabelRequested = urlStr.indexOf('https://' + baseUrl) === 0
-            if (isWhilteLabelRequested) {
-                return
+        WebView {
+            id: webView
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            zoomFactor: Suru.units.gu(1) / 8
+            onLoadProgressChanged: {
+                console.log('load progress', loadProgress)
             }
 
-            Qt.openUrlExternally(request.url)
-        }
+            onNavigationRequested: function(request) {
+                const urlStr = request.url.toString()
+                console.log('Navigation requested', urlStr)
+                const isWhilteLabelRequested = urlStr.indexOf('https://' + baseUrl) === 0
+                if (isWhilteLabelRequested) {
+                    return
+                }
 
-        onNewViewRequested: function(request) {
-            var url = request.requestedUrl.toString()
-            console.log('New tab requested', url)
-            Qt.openUrlExternally(url)
+                Qt.openUrlExternally(request.url)
+            }
+
+            onNewViewRequested: function(request) {
+                var url = request.requestedUrl.toString()
+                console.log('New tab requested', url)
+                Qt.openUrlExternally(url)
+            }
         }
     }
 

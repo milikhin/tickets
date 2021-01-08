@@ -1,5 +1,8 @@
 # Tickets
 ## About
+
+![App logo](http://milikhin.name/img/tickets.png?)
+
 Search airline tickets on Ubuntu Touch.
 
 The app relies on the travelpayouts API and consists of two major parts:
@@ -16,3 +19,4 @@ Your feedback and feature requests are very appreciated.
 
 * No internationalization yet
 * No support for convergence yet
+* No support for dark theme

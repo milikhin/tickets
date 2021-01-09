@@ -19,4 +19,4 @@ Your feedback and feature requests are very appreciated.
 
 * No internationalization yet
 * No support for convergence yet
-* Support for dark theme is WIP
+* Support for the dark theme is a WIP

@@ -143,6 +143,7 @@ ColumnLayout {
                         height: 40
                         id: listContent
                         width: parent.width
+                        color: "transparent"
 
                         Label {
                             anchors.fill: parent

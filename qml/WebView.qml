@@ -9,48 +9,45 @@ Item {
     property string baseUrl
     property alias url: webView.url
     property int itemSpacing: 0
+    property alias loading: webView.loading
 
-    ColumnLayout {
+    WebView {
+        id: webView
+        visible: loading || (webView.title && webView.title !== baseUrl)
         anchors.fill: parent
-        visible: loading || webView.title !== baseUrl
-
-        ProgressBar {
-            Layout.fillWidth: true
-            indeterminate: true
-            visible: webView.loading
+        zoomFactor: Suru.units.gu(1) / 8
+        onTitleChanged: {
+            // webView.title === baseUrl => true -- page loading failed
+            // direct binding doesn't work for some reason
+            errorMsg.visible = !webView.loading && (webView.title === baseUrl || !webView.title)
+        }
+        onLoadingChanged: {
+            errorMsg.visible = !webView.loading && (webView.title === baseUrl || !webView.title)
         }
 
-        WebView {
-            id: webView
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            zoomFactor: Suru.units.gu(1) / 8
-            onLoadProgressChanged: {
-                console.log('load progress', loadProgress)
+        onNavigationRequested: function(request) {
+            const urlStr = request.url.toString()
+            console.log('Navigation requested', urlStr)
+            const isWhilteLabelRequested = urlStr.indexOf('https://' + baseUrl) === 0
+            if (isWhilteLabelRequested) {
+                return
             }
 
-            onNavigationRequested: function(request) {
-                const urlStr = request.url.toString()
-                console.log('Navigation requested', urlStr)
-                const isWhilteLabelRequested = urlStr.indexOf('https://' + baseUrl) === 0
-                if (isWhilteLabelRequested) {
-                    return
-                }
-
-                Qt.openUrlExternally(request.url)
-            }
-
-            onNewViewRequested: function(request) {
-                var url = request.requestedUrl.toString()
-                console.log('New tab requested', url)
-                Qt.openUrlExternally(url)
-            }
+            Qt.openUrlExternally(request.url)
         }
+
+        onNewViewRequested: function(request) {
+            var url = request.requestedUrl.toString()
+            console.log('New tab requested', url)
+            Qt.openUrlExternally(url)
+        }
+
     }
 
     Label {
-        // webView.title === baseUrl => true when page loading failed
-        visible: !webView.loading && webView.title === baseUrl
+        id: errorMsg
+        visible: false
+
         anchors {
             left: parent.left
             right: parent.right

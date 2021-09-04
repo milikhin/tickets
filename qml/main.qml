@@ -88,17 +88,17 @@ ApplicationWindow {
             }
         }
 
-        ProgressBar {
-            anchors {
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
-                leftMargin: -itemSpacing
-                rightMargin: -itemSpacing
-            }
-            indeterminate: true
-            visible: pageStack.currentItem.loading === true
-        }
+        // ProgressBar {
+        //     anchors {
+        //         bottom: parent.bottom
+        //         left: parent.left
+        //         right: parent.right
+        //         leftMargin: -itemSpacing
+        //         rightMargin: -itemSpacing
+        //     }
+        //     indeterminate: true
+        //     visible: pageStack.currentItem.loading === true
+        // }
     }
 
     Components.SearchParams {
@@ -147,7 +147,16 @@ ApplicationWindow {
                         headerText.text = defaultTitle
                     })
                 }
-                onCleared: searchParams.setFrom('', '')
+
+                hasButton: true
+                btnIcon: 'retweet'
+                buttonEnabled: searchParams.fromIata || searchParams.toIata
+                onBtnClicked: {
+                    const currentFromIata = searchParams.fromIata
+                    const currentFromCity = searchParams.fromCity
+                    searchParams.setFrom(searchParams.toIata || '', searchParams.toCity || '')
+                    searchParams.setTo(currentFromIata || '', currentFromCity || '')
+                }
             }
 
             Components.FakeTextField {
@@ -168,31 +177,32 @@ ApplicationWindow {
                         headerText.text = defaultTitle
                     })
                 }
-                onCleared: searchParams.setTo('', '')
             }
 
             Components.FakeTextField {
                 Layout.fillWidth: true
 
+                hasButton: true
                 label: qsTr('Depart:')
                 placeHolder: qsTr('Select date...')
                 text: searchParams.departDate
                     ? searchParams.departDate.toLocaleDateString()
                     : ''
                 required: true
-                resetIcon: 'reset'
+                btnIcon: 'reset'
                 onClicked: {
                     departPicker.open()
                     if (searchParams.departDate) {
                         departPicker.date = searchParams.departDate
                     }
                 }
-                onCleared: searchParams.departDate = new Date(Date.now() + 24 * 60 * 60 * 1000) // tomorrow
+                onBtnClicked: searchParams.departDate = new Date(Date.now() + 24 * 60 * 60 * 1000) // tomorrow
             }
 
             Components.FakeTextField {
                 Layout.fillWidth: true
 
+                hasButton: true
                 label: qsTr('Return:')
                 placeHolder: qsTr('Select date...')
                 text: searchParams.returnDate
@@ -202,7 +212,7 @@ ApplicationWindow {
                     returnPicker.open()
                     returnPicker.date = searchParams.returnDate || searchParams.departDate
                 }
-                onCleared: searchParams.returnDate = undefined
+                onBtnClicked: searchParams.returnDate = undefined
             }
 
             ColumnLayout {

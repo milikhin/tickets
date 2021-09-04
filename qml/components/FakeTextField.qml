@@ -10,10 +10,12 @@ Item {
     property string label
     property string text
     property bool required: false
-    property string resetIcon: 'edit-clear'
+    property bool hasButton: false
+    property bool buttonEnabled: true
+    property string btnIcon: 'edit-clear'
     property string placeHolder
+    signal btnClicked()
     signal clicked()
-    signal cleared()
 
     height: childrenRect.height
 
@@ -53,13 +55,15 @@ Item {
             }
 
             Button {
-                onClicked: cleared()
+                onClicked: btnClicked()
+                opacity: hasButton ? 1 : 0
+                enabled: hasButton && buttonEnabled
                 UITK.Icon {
                     anchors.centerIn: parent
                     color: theme.palette.normal.backgroundText
                     height: Suru.units.gu(2)
                     width: Suru.units.gu(2)
-                    name: resetIcon
+                    name: btnIcon
                 }
             }
         }

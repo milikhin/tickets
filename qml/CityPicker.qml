@@ -94,10 +94,13 @@ ColumnLayout {
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
     }
 
-    BusyIndicator {
-        id: busyIndicator
-        anchors.horizontalCenter: parent.horizontalCenter
-        visible: false
+    Item {
+        Layout.fillWidth: true
+        BusyIndicator {
+            id: busyIndicator
+            anchors.horizontalCenter: parent.horizontalCenter
+            visible: false
+        }
     }
 
     ColumnLayout {

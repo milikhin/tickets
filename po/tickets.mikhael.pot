@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the tickets.mikhael package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tickets.mikhael\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-05 17:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/CityPicker.qml:26
+msgid "Search:"
+msgstr ""
+
+#: ../qml/CityPicker.qml:41
+msgid "City or airport..."
+msgstr ""
+
+#: ../qml/CityPicker.qml:82
+msgid "Unable to load airport list. Please check you network connection"
+msgstr ""
+
+#: ../qml/CityPicker.qml:94
+msgid "Select city/airport:"
+msgstr ""
+
+#: ../qml/Settings.qml:18
+msgid "Currency:"
+msgstr ""
+
+#: ../qml/WebView.qml:60
+msgid "Unable to load search results. Please check you network connection"
+msgstr ""
+
+#: ../qml/components/DatePicker.qml:12
+msgid "Select date"
+msgstr ""
+
+#: ../qml/main.qml:19
+msgid "Search for airline tickets"
+msgstr ""
+
+#: ../qml/main.qml:85
+msgid "Settings"
+msgstr ""
+
+#: ../qml/main.qml:141
+msgid "From:"
+msgstr ""
+
+#: ../qml/main.qml:142 ../qml/main.qml:175
+msgid "Select airport..."
+msgstr ""
+
+#: ../qml/main.qml:149
+msgid "Departure city"
+msgstr ""
+
+#: ../qml/main.qml:171
+msgid "To:"
+msgstr ""
+
+#: ../qml/main.qml:179
+msgid "Destination city"
+msgstr ""
+
+#: ../qml/main.qml:192
+msgid "Depart:"
+msgstr ""
+
+#: ../qml/main.qml:193 ../qml/main.qml:213
+msgid "Select date..."
+msgstr ""
+
+#: ../qml/main.qml:212
+msgid "Return:"
+msgstr ""
+
+#: ../qml/main.qml:230
+msgid "Adults (12+):"
+msgstr ""
+
+#: ../qml/main.qml:258
+msgid "Children (2-12):"
+msgstr ""
+
+#: ../qml/main.qml:282
+msgid "Infants (under 2):"
+msgstr ""
+
+#: ../qml/main.qml:306
+msgid "Search flights"
+msgstr ""
+
+#: tickets.desktop.in.h:1
+msgid "Tickets"
+msgstr ""

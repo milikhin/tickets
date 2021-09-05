@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the tickets.mikhael package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tickets.mikhael\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-05 16:25+0000\n"
+"PO-Revision-Date: 2021-09-05 18:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: ../qml/CityPicker.qml:25
+msgid "Search:"
+msgstr "Поиск:"
+
+#: ../qml/CityPicker.qml:40
+msgid "City or airport..."
+msgstr "Город или аэропорт..."
+
+#: ../qml/CityPicker.qml:81
+msgid "Unable to load airport list. Please check you network connection"
+msgstr ""
+"Не удается загрузить список аэропортов. Пожалуйста, проверьте подключение к "
+"Интернету"
+
+#: ../qml/CityPicker.qml:93
+msgid "Select city/airport:"
+msgstr "Выберите город/аэропорт:"
+
+#: ../qml/Settings.qml:18
+msgid "Currency:"
+msgstr "Валюта:"
+
+#: ../qml/WebView.qml:60
+msgid "Unable to load search results. Please check you network connection"
+msgstr ""
+"Не удается загрузить результаты поиска. Пожалуйста, проверьте подключение к "
+"интернету"
+
+#: ../qml/components/DatePicker.qml:12
+msgid "Select date"
+msgstr "Выберите дату"
+
+#: ../qml/main.qml:19
+msgid "Search for airline tickets"
+msgstr "Поиск авиабилетов"
+
+#: ../qml/main.qml:83
+msgid "Settings"
+msgstr "Настройки"
+
+#: ../qml/main.qml:139
+msgid "From:"
+msgstr "Откуда:"
+
+#: ../qml/main.qml:140 ../qml/main.qml:173
+msgid "Select airport..."
+msgstr "Выберите аэропорт..."
+
+#: ../qml/main.qml:147
+msgid "Departure city"
+msgstr "Город отправления"
+
+#: ../qml/main.qml:169
+msgid "To:"
+msgstr "Куда:"
+
+#: ../qml/main.qml:177
+msgid "Destination city"
+msgstr "Город назначения"
+
+#: ../qml/main.qml:190
+msgid "Depart:"
+msgstr "Когда:"
+
+#: ../qml/main.qml:191 ../qml/main.qml:211
+msgid "Select date..."
+msgstr "Выберите дату..."
+
+#: ../qml/main.qml:210
+msgid "Return:"
+msgstr "Обратно:"
+
+#: ../qml/main.qml:228
+msgid "Adults (12+):"
+msgstr "Взрослые (12+):"
+
+#: ../qml/main.qml:256
+msgid "Children (2-12):"
+msgstr "Дети (2-12):"
+
+#: ../qml/main.qml:280
+msgid "Infants (under 2):"
+msgstr "Младенцы (до 2 лет):"
+
+#: ../qml/main.qml:304
+msgid "Search flights"
+msgstr "Найти билеты"
+
+#: tickets.desktop.in.h:1
+msgid "Tickets"
+msgstr "Авиабилеты"

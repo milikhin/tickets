@@ -15,7 +15,7 @@ ColumnLayout {
         Layout.topMargin: itemSpacing
         Layout.leftMargin: itemSpacing
         Layout.rightMargin: itemSpacing
-        text: qsTr('Currency:')
+        text: i18n.tr('Currency:')
     }
 
     ComboBox {

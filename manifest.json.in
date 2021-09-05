@@ -1,6 +1,6 @@
 {
     "name": "tickets.mikhael",
-    "description": "Gallery of components for Qt Quick Controls 2",
+    "description": "Search for cheap airline tickets",
     "architecture": "@CLICK_ARCH@",
     "title": "Tickets",
     "hooks": {
@@ -9,8 +9,7 @@
             "desktop":  "tickets.desktop"
         }
     },
-    "version": "0.1.2",
+    "version": "0.2.0",
     "maintainer": "Mikhael Milikhin <mikhael@milikhin.name>",
-    "framework" : "ubuntu-sdk-16.04"
+    "framework" : "@CLICK_FRAMEWORK@"
 }
-

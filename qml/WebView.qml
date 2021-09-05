@@ -57,7 +57,7 @@ Item {
         }
 
         horizontalAlignment: Qt.AlignHCenter
-        text: qsTr('Unable to load search results. Please check you network connection')
+        text: i18n.tr('Unable to load search results. Please check you network connection')
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
     }
 }

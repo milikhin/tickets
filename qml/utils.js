@@ -23,8 +23,8 @@ function request(url, callback) {
     xhr.send()
 }
 
-function findCity(text, callback) {
-    var url = 'https://autocomplete.travelpayouts.com/places2?term=' + text + '&locale=en'
+function findCity(text, locale, callback) {
+    var url = 'https://autocomplete.travelpayouts.com/places2?term=' + text + '&locale=' + locale
     request(url, function(err, res) {
         if (err) {
             return callback(err)
@@ -77,6 +77,7 @@ function getSearchUrl(options) {
         '&children=' + (options.children || 0) +
         '&infants=' + (options.infants || 0) +
         '&currency=' + options.currency +
+        '&locale=' + options.lang +
         '&with_request=true'
 
     return url

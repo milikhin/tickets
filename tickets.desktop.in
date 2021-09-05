@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Tickets
-Exec=tickets
+_Name=Tickets
+Exec=tickets %U
 Icon=assets/logo.svg
 Terminal=false
 Type=Application

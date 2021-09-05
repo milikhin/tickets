@@ -9,7 +9,7 @@ Dialog {
     id: messageDialog
     standardButtons: Dialog.Ok | Dialog.Cancel
     modal: true
-    title: qsTr("Select date")
+    title: i18n.tr("Select date")
     property alias date: picker.date
 
     Pickers.DatePicker {

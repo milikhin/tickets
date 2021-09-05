@@ -9,6 +9,7 @@ ColumnLayout {
     id: root
     readonly property int itemSpacing: 8
     readonly property int spacing: itemSpacing
+    property string lang
 
     signal selected(string code, string name)
 
@@ -22,7 +23,7 @@ ColumnLayout {
         Layout.leftMargin: itemSpacing
         Layout.rightMargin: itemSpacing
 
-        text: qsTr('Search:')
+        text: i18n.tr('Search:')
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
     }
 
@@ -37,7 +38,7 @@ ColumnLayout {
         inputMethodHints: Qt.ImhNoPredictiveText
         focus: true
 
-        placeholderText: qsTr("City or airport...")
+        placeholderText: i18n.tr("City or airport...")
         onTextChanged: {
             model.clear()
             if (!text) {
@@ -51,7 +52,7 @@ ColumnLayout {
             resultsLabel.visible = false
             busyIndicator.visible = true
 
-            QmlJs.findCity(text, function(err, res) {
+            QmlJs.findCity(text, root.lang, function(err, res) {
                 if (uid !== requestId) {
                     return
                 }
@@ -78,7 +79,7 @@ ColumnLayout {
         Layout.rightMargin: itemSpacing
         visible: false
 
-        text: qsTr('Unable to load airport list. Please check you network connection')
+        text: i18n.tr('Unable to load airport list. Please check you network connection')
         horizontalAlignment: Qt.AlignHCenter
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
     }
@@ -90,7 +91,7 @@ ColumnLayout {
         Layout.rightMargin: itemSpacing
         visible: false
 
-        text: qsTr(model.count > 0 ? 'Select city/airport:' : 'No results found')
+        text: i18n.tr(model.count > 0 ? 'Select city/airport:' : 'No results found')
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
     }
 

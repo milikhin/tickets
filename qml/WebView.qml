@@ -27,6 +27,9 @@ Item {
 
         onNavigationRequested: function(request) {
             const urlStr = request.url.toString()
+            if (!request.isMainFrame) {
+                return
+            }
             console.log('Navigation requested', urlStr)
             const isWhilteLabelRequested = urlStr.indexOf('https://' + baseUrl) === 0
             if (isWhilteLabelRequested) {

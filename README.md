@@ -17,6 +17,5 @@ Your feedback and feature requests are very appreciated.
 
 ## Known issues
 
-* No internationalization yet
 * No support for convergent UI yet
 * Support for the dark theme is limited to the QML frontend

@@ -64,7 +64,7 @@ msgstr "Kies een vliegveld…"
 
 #: ../qml/main.qml:149
 msgid "Departure city"
-msgstr "Vertrekpunt"
+msgstr "Vertreklocatie"
 
 #: ../qml/main.qml:171
 msgid "To:"
